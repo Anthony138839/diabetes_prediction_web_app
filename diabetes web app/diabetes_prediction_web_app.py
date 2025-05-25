@@ -9,7 +9,7 @@ import pickle
 # scaler = StandardScaler()
 
 # Loading the model
-with open("diabetes_trained.sav", "rb") as model_file:
+with open("diabetes web app/diabetes_trained.sav", "rb") as model_file:
     loaded_model = pickle.load(model_file)
 
 # Creating a function for prediction
