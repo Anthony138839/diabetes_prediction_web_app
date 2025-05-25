@@ -3,12 +3,14 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import pickle
-from sklearn.preprocessing import StandardScaler
+# from sklearn.preprocessing import StandardScaler
 
 # Loading the Standard Scaler
 # scaler = StandardScaler()
+
 # Loading the model
-loaded_model = pickle.load(open(r"C:\Users\USER\Documents\EMEKA'S CODING STUFF\BACKEND\PYTHON IN GENERAL\Data Science\Introduction To Machine Learning\Codes\Project 2\diabetes_trained.sav", "rb"))
+with open(r"diabetes web app\diabetes_trained.sav", "rb") as model_file:
+    loaded_model = pickle.load(model_file)
 
 # Creating a function for prediction
 def diabetes_prediction(input_data):
